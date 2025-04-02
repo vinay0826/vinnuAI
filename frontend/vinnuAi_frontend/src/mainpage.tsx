@@ -24,19 +24,7 @@ export function Mainpage(): React.ReactElement {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
   
-  const handleCardMouseMove = (e: React.MouseEvent<HTMLDivElement>): void => {
-    if (!cardRef.current) return;
-    
-    const rect = cardRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    
-    const percentX = (x / rect.width) * 100;
-    const percentY = (y / rect.height) * 100;
-    
-    cardRef.current.style.setProperty('--x', `${percentX}%`);
-    cardRef.current.style.setProperty('--y', `${percentY}%`);
-  };
+ 
   
   return (
     <div className={`mainpage ${loaded ? 'loaded' : ''}`}>
