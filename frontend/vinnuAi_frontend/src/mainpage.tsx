@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './mainpage.css';
 
 export function Mainpage(): React.ReactElement {
   const [loaded, setLoaded] = useState<boolean>(false);
-  const cardRef = useRef<HTMLDivElement>(null);
+ 
   const navigate = useNavigate();
   
   useEffect(() => {
